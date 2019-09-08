@@ -3,7 +3,7 @@
     <Navbar />
       <div class="container">
           <div class="section">
-              <FavoriteThingsList/>
+                <FavoriteThingsList/>
           </div>
       </div>
   </div>
