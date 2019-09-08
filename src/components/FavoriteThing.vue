@@ -1,5 +1,5 @@
 <template>
-    <li class="collection-item avatar">
+    <li class="collection-item">
         <span class="title"><b>Title</b>: {{ title }}</span>
         <p><b>Description</b>: {{ description }}</p>
         <p><b>Category</b>: {{ category }}</p>
