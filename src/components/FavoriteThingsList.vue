@@ -14,6 +14,8 @@
 
 <script>
 import FavoriteThing from './FavoriteThing';
+import FavoriteThingsService from '../services/FavoriteThingsService';
+
 export default {
     name: 'FavoriteThingsList',
     components: {
@@ -23,6 +25,11 @@ export default {
         return {
             ThingsList: []
         }
+    },
+    mounted (){
+        const response = FavoriteThingsService.getFavoriteThings().then(response => {
+            this.ThingsList = response.data;
+        })
     },
     methods:{
         deleteFavorite(title){
