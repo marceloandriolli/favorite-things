@@ -27,13 +27,13 @@ export default {
         }
     },
     mounted (){
-        const response = FavoriteThingsService.getFavoriteThings().then(response => {
+        FavoriteThingsService.getFavoriteThings().then(response => {
             this.ThingsList = response.data;
         })
     },
     methods:{
         deleteFavorite(title){
-            const indexOfFavoriteThings = this.ThingsList.indexOf(name);
+            const indexOfFavoriteThings = this.ThingsList.indexOf(title);
             this.ThingsList.splice(indexOfFavoriteThings, 1);
         }
     }
